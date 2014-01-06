@@ -6,7 +6,7 @@ from distutils.core import setup
 
 setup(
   name='easy_pause_resume',
-  version='0.1',
+  version='0.2.0',
   description='Easy pause & resume a python program by sending signals.',
   author='yc',
   author_email='iyanchuan@gmail.com',

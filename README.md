@@ -29,10 +29,17 @@ pip install easy_pause_resume
 3. You can customize signals also
 
   ```python
+  from easy_pause_resume import EasyPauseResume
+
   # using default signals: SIGUSR1 as pause and SIGUSR2 as resume
+  epr = EasyPauseResume()
   epr.wait_if_paused()
+
   # using custom signals: SIGHUP as pause and SIGINT as resume
-  epr.wait_if_paused(sig_pause='SIGHUP', sig_resume='SIGINT')
+  epr = EasyPauseResume(sig_pause='SIGHUP', sig_resume='SIGINT')
+  epr.wait_if_paused()
+
   # output logs
-  epr.wait_if_paused(debug=True)
+  epr = EasyPauseResume(debug=True)
+  epr.wait_if_paused()
   ```
